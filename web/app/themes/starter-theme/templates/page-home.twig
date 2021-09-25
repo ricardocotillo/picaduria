@@ -1,0 +1,34 @@
+{% extends "base.twig" %}
+
+{% block content %}
+  <div class="w-full h-screen" style="background: url({{ site.theme.link }}/static/img/texture.png);">
+    <div class="container mx-auto">
+      <img class="w-2/3 mx-auto" src="{{ site.theme.link }}/static/img/hacemos.png" />
+    </div>
+  </div>
+  <div class="w-full h-screen flex flex-col justify-center" style="background-image: url({{ site.theme.link }}/static/img/texture.png);">
+    <div class="container mx-auto">
+      <img class="w-1/2 mx-auto" src="{{ site.theme.link }}/static/img/productos.png" />
+      <p class="text-brown font-arsilon text-5xl text-center">Los mejores frutos secos, directamente del productor, seleccionados para que puedan ser dignos de tu mesa</p>
+    </div>
+  </div>
+  <div class="w-full">
+    <video autoplay muted class="w-full" src="{{ site.theme.link }}/static/vid/productos.mp4"></video>
+  </div>
+  <div class="w-full h-screen bg-pink flex items-center">
+    <div class="container mx-auto flex justify-center items-center">
+      <div class="grid grid-cols-1 grid-rows-1 items-center">
+        <p class="text-13xl ml-72 mb-0 font-arsilon text-white col-start-1 col-end-1 row-start-1 row-end-1">Cashew</p>
+        <img class="col-start-1 col-end-1 row-start-1 row-end-1" src="{{ site.theme.link }}/static/img/cashew_perspective.webp" />
+      </div>
+    </div>
+  </div>
+  <div class="w-full h-screen bg-green flex items-center">
+    <div class="container mx-auto flex justify-center items-center">
+      <div class="grid grid-cols-1 grid-rows-1 items-center">
+        <p class="text-13xl ml-72 mb-0 font-arsilon text-white col-start-1 col-end-1 row-start-1 row-end-1">Almendras</p>
+        <img class="col-start-1 col-end-1 row-start-1 row-end-1" src="{{ site.theme.link }}/static/img/almond_perspective.webp" />
+      </div>
+    </div>
+  </div>
+{% endblock %}

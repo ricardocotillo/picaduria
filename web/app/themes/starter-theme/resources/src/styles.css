@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.woocommerce-breadcrumb {
+    @apply hidden;
+}
+
+nav.nav-main li.menu-item-has-children:hover ul {
+    display: block;
+}
+
+.before-shop-loop {
+    @apply hidden;
+}
+
+.woocommerce-notices-wrapper {
+    @apply w-full;
+}
+.attachment-woocommerce_thumbnail {
+    @apply mx-auto;
+}
