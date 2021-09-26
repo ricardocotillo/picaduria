@@ -19,7 +19,7 @@
           </div>
 					<nav
             id="nav-main"
-            class="nav-main absolute md:static w-full font-phosphate-inline text-brown text-2xl bg-white z-40 transform -translate-x-full md:transform-none transition-transform"
+            class="nav-main absolute md:static w-full font-phosphate-inline text-brown text-2xl bg-white z-10 transform -translate-x-full md:transform-none transition-transform"
             role="navigation"
           >
 						{% include "menu.twig" with {'items': menu.get_items} %}
@@ -30,7 +30,7 @@
 
 		<section id="content" role="main" class="content-wrapper">
 			{# {% if title %}<h1>{{title}}</h1>{% endif %} #}
-			<div class="wrapper {{sidebar_class}}">
+			<div class="wrapper {{sidebar_class}} overflow-x-hidden">
 				{% block content %}
 					Sorry, no content
 				{% endblock %}

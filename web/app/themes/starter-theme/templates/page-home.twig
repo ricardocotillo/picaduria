@@ -1,10 +1,71 @@
 {% extends "base.twig" %}
 
 {% block content %}
-  <div id="home" class="w-full h-screen" style="background: url({{ site.theme.link }}/static/img/texture.png);">
+  <div id="home" class="w-full h-screen relative" style="background: url({{ site.theme.link }}/static/img/texture.png);">
     <div class="container mx-auto">
       <img class="w-2/3 mx-auto" src="{{ site.theme.link }}/static/img/hacemos.png" />
     </div>
+
+    {# Pecanas #}
+    <img
+      data-rellax-speed="5"
+      class="absolute -left-10 top-1/3 rellax z-40"
+      src="{{ site.theme.link }}/static/img/fruto1.png"
+    />
+    <img
+      data-rellax-speed="6"
+      class="absolute left-48 top-20 rellax z-40"
+      src="{{ site.theme.link }}/static/img/fruto4.png"
+    />
+    <img
+      data-rellax-speed="7"
+      style="transform: scaleX(-1)"
+      class="absolute w-20 right-1/4 top-20 rellax z-40"
+      src="{{ site.theme.link }}/static/img/fruto4.png"
+    />
+
+    {# Cashews #}
+    <img
+      data-rellax-speed="12"
+      class="absolute right-28 top-1/2 w-20 rellax"
+      src="{{ site.theme.link }}/static/img/fruto6.png"
+    />
+    <img
+      data-rellax-speed="6"
+      class="absolute left-1/3 top-0 rellax"
+      src="{{ site.theme.link }}/static/img/fruto7.png"
+    />
+
+    {# Almendras #}
+    <img
+      data-rellax-speed="9"
+      style="transform: rotate(130deg)"
+      class="absolute left-1/3 top-1/2 w-20 rellax"
+      src="{{ site.theme.link }}/static/img/almendra2.png"
+    />
+    <img
+      data-rellax-speed="7"
+      style="transform: rotate(45deg)"
+      class="absolute -right-16 top-32 w-40 rellax z-40"
+      src="{{ site.theme.link }}/static/img/fruto5.png"
+    />
+    <img
+      data-rellax-speed="5"
+      class="absolute -right-10 bottom-0 w-80 rellax z-40"
+      src="{{ site.theme.link }}/static/img/fruto2.png"
+    />
+
+    {# Otros #}
+    <img
+      data-rellax-speed="7" 
+      class="absolute w-32 right-40 top-1/3 rellax"
+      src="{{ site.theme.link }}/static/img/fruto3.png"
+    />
+    <img
+      data-rellax-speed="10" 
+      class="absolute w-32 left-1/3 bottom-12 rellax z-40"
+      src="{{ site.theme.link }}/static/img/fruto3.png"
+    />
   </div>
 
   <div id="nosotros" class="w-full h-screen flex flex-col justify-center" style="background-image: url({{ site.theme.link }}/static/img/texture.png);">
@@ -41,7 +102,12 @@
       <p class="w-1/2 text-lg text-center text-brown">Los frutos secos son una excelente fuente de nutrientes escenciales. Aportan un elevado contenido de proteinas, antioxidantes, fibra, minerales
       y vitaminas B y E. A lo que se añade que las grasas que contienen son 'buenas', es decir monoinsaturadas y poliinsaturadas. Estas ayudan a disminuir
       los niveles de colesterol LDL, bajan los triglicéridos, disminuyen la coagulación de la sangre y mejoran la salud de los vasos sanguíneos</p>
-      <img class="absolute top-0 left-1/2 -translate-x-1/2" src="{{ site.theme.link }}/static/img/ensalada1.png" />
+      <img
+        data-rellax-speed="1.5"
+        style="transform: translateX(-50%)"
+        class="absolute bottom-0 left-1/2 rellax"
+        src="{{ site.theme.link }}/static/img/ensalada1.png"
+      />
       <img class="absolute bottom-0 left-0" src="{{ site.theme.link }}/static/img/galleta.png" />
       <img class="absolute bottom-0 right-0" src="{{ site.theme.link }}/static/img/ensalada2.png" />
     </div>

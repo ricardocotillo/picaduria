@@ -1,6 +1,10 @@
 jQuery( document ).ready( function( $ ) {
-
   // Your JavaScript goes here
+
+  // Parallax
+  const rellax = new Rellax('.rellax')
+
+  // Menu
   const ham = $('.hamburger')
   const showcase = $('#showcase')
   const zoom = $('.product-zoom')
