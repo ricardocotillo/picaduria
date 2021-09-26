@@ -26,15 +26,20 @@
         {% do action('woocommerce_before_shop_loop_item_title') %}
       </div>
 
-      {% if post.title %}
+      <div class="flex justify-between">
+        {% if post.title %}
           {# <h3 class="entry-title text-brown text-lg font-semibold"><a href="{{ post.link }}">{{ post.title }}</a></h3> #}
           <h3 class="entry-title text-brown text-lg font-semibold">{{ post.title }}</h3>
-      {% else %}
+        {% else %}
           {# <h3 class="entry-title text-brown text-lg font-semibold"><a href="{{ post.link }}">{{ fn('the_title') }}</a></h3> #}
           <h3 class="entry-title text-brown text-lg font-semibold">{{ fn('the_title') }}</h3>
-      {% endif %}
+        {% endif %}
 
-      {% do action( 'woocommerce_after_shop_loop_item_title' ) %}
+        {% do action( 'woocommerce_after_shop_loop_item_title' ) %}
+        <div>
+          
+        </div>
+      </div>
       {% do action( 'woocommerce_after_shop_loop_item' ) %}
 
     </div>

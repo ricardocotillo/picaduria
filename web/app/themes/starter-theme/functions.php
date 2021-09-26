@@ -126,9 +126,9 @@ class StarterSite extends Timber\Site {
 	public function crb_attach_theme_options() {
 		Container::make( 'theme_options', __( 'Social Links' ) )
 			->add_fields( array(
-				Field::make( 'text', 'crb_facebook_link', __( 'Facebook Link' ) ),
-				Field::make( 'text', 'crb_instagram_link', __( 'Instagram Link' ) ),
-				Field::make( 'text', 'crb_whatsapp_link', __( 'Whatsapp Link' ) ),
+				Field::make( 'text', 'crb_facebook_link', __( 'Facebook Link' ) )->set_default_value( '#' ),
+				Field::make( 'text', 'crb_instagram_link', __( 'Instagram Link' ) )->set_default_value( '#' ),
+				Field::make( 'text', 'crb_whatsapp_link', __( 'Whatsapp Link' ) )->set_default_value( '#' ),
 			) );
 	}
 
