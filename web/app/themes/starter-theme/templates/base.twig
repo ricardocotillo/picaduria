@@ -11,7 +11,7 @@
 			{% block header %}
 				<div class="wrapper block md:flex justify-between items-center container mx-auto">
 					<div class="flex justify-between w-full md:w-28">
-            <a class="hdr-logo-link" href="{{site.url}}" rel="home"><img class="custom-logo w-14 md:w-28" src="{{ site.theme.link }}/static/img/logo.svg" /></a>
+            <a class="hdr-logo-link" href="{% if is_front_page() %}#home{% else %}{{site.url}}{% endif %}" rel="home"><img class="custom-logo w-14 md:w-28" src="{{ site.theme.link }}/static/img/logo.svg" /></a>
 					  <div class="md:hidden">
               <img class="w-10 p-2 cursor-pointer hidden hamburger" src="{{ site.theme.link }}/static/icons/cancel.svg" />
               <img class="w-10 p-2 cursor-pointer hamburger" src="{{ site.theme.link }}/static/icons/menu.svg" />

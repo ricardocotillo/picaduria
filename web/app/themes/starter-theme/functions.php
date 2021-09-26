@@ -205,6 +205,7 @@ class StarterSite extends Timber\Site {
 	public function add_to_twig( $twig ) {
 		$twig->addExtension( new Twig\Extension\StringLoaderExtension() );
 		$twig->addFilter( new Twig\TwigFilter( 'myfoo', array( $this, 'myfoo' ) ) );
+		$twig->addFunction( new Timber\Twig_Function( 'is_front_page', 'is_front_page' ) );
 		return $twig;
 	}
 

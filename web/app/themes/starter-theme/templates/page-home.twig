@@ -36,7 +36,44 @@
     </div>
   </div>
 
-  <div id="momentos"></div>
+  <div id="momentos" class="w-full h-screen bg-warmGray-200 relative">
+    <div class="container mx-auto relative h-screen flex justify-center items-center">
+      <p class="w-1/2 text-lg text-center text-brown">Los frutos secos son una excelente fuente de nutrientes escenciales. Aportan un elevado contenido de proteinas, antioxidantes, fibra, minerales
+      y vitaminas B y E. A lo que se añade que las grasas que contienen son 'buenas', es decir monoinsaturadas y poliinsaturadas. Estas ayudan a disminuir
+      los niveles de colesterol LDL, bajan los triglicéridos, disminuyen la coagulación de la sangre y mejoran la salud de los vasos sanguíneos</p>
+      <img class="absolute top-0 left-1/2 -translate-x-1/2" src="{{ site.theme.link }}/static/img/ensalada1.png" />
+      <img class="absolute bottom-0 left-0" src="{{ site.theme.link }}/static/img/galleta.png" />
+      <img class="absolute bottom-0 right-0" src="{{ site.theme.link }}/static/img/ensalada2.png" />
+    </div>
+  </div>
 
-  <div id="contacto"></div>
+  {# <div id="contacto" class="w-full h-screen" style="background: linear-gradient(90deg, #FFC0CB 50%, #00FFFF 50%)"> #}
+  <div id="contacto" class="w-full h-screen bg-white">
+    <div class="container h-screen mx-auto flex">
+      <div class="w-full"></div>
+      <div class="w-full p-4 flex justify-center items-center">
+        <div class="w-full">
+          <h4 class="text-black text-4xl font-bold text-center">¿Tienes dudas?</h4>
+          <form action="">
+            <div class="my-4">
+              <input class="w-full rounded-md focus:ring-blue" type="text" name="name" placeholder="¿Cual es tu nombre?">
+            </div>
+            <div class="my-4">
+              <input class="w-full rounded-md focus:ring-blue" type="email" name="email" placeholder="¿Cual es tu email?">
+            </div>
+            <div class="my-4">
+              <textarea class="w-full rounded-md focus:ring-blue" name="message" cols="30" rows="10" placeholder="¿Cual es tu duda?"></textarea>
+            </div>
+            <div class="my-4">
+              <button class="w-full rounded-md bg-pink text-white text-lg py-2">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-full" id="cierre">
+    <img class="w-full" src="{{ site.theme.link }}/static/img/cierre.webp" />
+  </div>
 {% endblock %}
