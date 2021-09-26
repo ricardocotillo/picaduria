@@ -70,7 +70,7 @@
   <div id="nosotros" class="w-full h-screen flex flex-col justify-center" style="background-image: url({{ site.theme.link }}/static/img/texture.png);">
     <div class="container mx-auto">
       <img class="w-full lg:w-1/2 mx-auto" src="{{ site.theme.link }}/static/img/productos.png" />
-      <p class="text-brown font-arsilon text-5xl text-center">Los mejores frutos secos, directamente del productor, seleccionados para que puedan ser dignos de tu mesa</p>
+      <p class="text-brown font-arsilon text-2xl sm:text-5xl text-center">Los mejores frutos secos, directamente del productor, seleccionados para que puedan ser dignos de tu mesa</p>
     </div>
   </div>
 
@@ -81,7 +81,7 @@
   <div class="w-full h-screen bg-pink flex items-center">
     <div class="container mx-auto flex justify-start lg:justify-center items-center">
       <div class="grid grid-cols-1 grid-rows-1 items-center">
-        <p class="text-7xl lg:text-13xl ml-32 lg:ml-72 mb-0 font-arsilon text-white col-start-1 col-end-1 row-start-1 row-end-1">Cashew</p>
+        <p class="text-5xl sm:text-7xl lg:text-13xl ml-32 lg:ml-72 mb-0 font-arsilon text-white col-start-1 col-end-1 row-start-1 row-end-1">Cashew</p>
         <img class="w-56 lg:w-auto col-start-1 col-end-1 row-start-1 row-end-1" src="{{ site.theme.link }}/static/img/cashew_perspective.webp" />
       </div>
     </div>
@@ -90,30 +90,41 @@
   <div class="w-full h-screen bg-green flex items-center">
     <div class="container mx-auto flex justify-start lg:justify-center items-center">
       <div class="grid grid-cols-1 grid-rows-1 items-center">
-        <p class="text-7xl lg:text-13xl ml-32 lg:ml-72 mb-0 font-arsilon text-white col-start-1 col-end-1 row-start-1 row-end-1">Almendras</p>
+        <p class="text-5xl sm:text-7xl lg:text-13xl ml-32 lg:ml-72 mb-0 font-arsilon text-white col-start-1 col-end-1 row-start-1 row-end-1">Almendras</p>
         <img class="w-56 lg:w-auto col-start-1 col-end-1 row-start-1 row-end-1" src="{{ site.theme.link }}/static/img/almond_perspective.webp" />
       </div>
     </div>
   </div>
 
   <div id="momentos" class="w-full h-screen bg-warmGray-200 relative">
-    <div class="container mx-auto relative h-screen flex justify-center items-center">
+    <div class="container mx-auto relative h-screen flex flex-col lg:flex-row justify-center items-center">
+      <img
+        class="w-28 lg:hidden"
+        src="{{ site.theme.link }}/static/img/ensalada1.png"
+      />
       <p class="lg:w-1/2 text-base lg:text-lg text-center text-brown">Los frutos secos son una excelente fuente de nutrientes escenciales. Aportan un elevado contenido de proteinas, antioxidantes, fibra, minerales
       y vitaminas B y E. A lo que se añade que las grasas que contienen son 'buenas', es decir monoinsaturadas y poliinsaturadas. Estas ayudan a disminuir
       los niveles de colesterol LDL, bajan los triglicéridos, disminuyen la coagulación de la sangre y mejoran la salud de los vasos sanguíneos</p>
+      <img
+        class="absolute w-14 lg:w-auto top-16 lg:top-1/2 lg:-translate-y-full left-20 lg:left-32 hidden lg:block"
+        src="{{ site.theme.link }}/static/img/flecha_celeste.png"
+      />
+      <img
+        class="absolute w-14 lg:w-auto top-16 lg:top-1/2 lg:-translate-y-full right-20 lg:right-32 hidden lg:block"
+        src="{{ site.theme.link }}/static/img/flecha_rosada.png"
+      />
+      <img
+        class="absolute w-14 lg:w-auto top-48 lg:top-auto bottom-auto lg:bottom-32 left-1/2 -translate-x-1/2 hidden lg:block"
+        src="{{ site.theme.link }}/static/img/flecha_verde.png"
+      />
       <img
         data-rellax-speed="1.5"
         style="transform: translateX(-50%)"
         class="absolute bottom-0 left-1/2 rellax w-52 lg:w-auto hidden lg:block"
         src="{{ site.theme.link }}/static/img/ensalada1.png"
       />
-      <img
-        style="transform: translateX(-50%)"
-        class="absolute top-0 left-1/2 w-36 lg:hidden"
-        src="{{ site.theme.link }}/static/img/ensalada1.png"
-      />
-      <img class="absolute top-32 lg:top-auto lg:bottom-0 left-0 w-36 lg:w-auto" src="{{ site.theme.link }}/static/img/galleta.png" />
-      <img class="absolute top-32 lg:top-auto lg:bottom-0 right-0 w-36 lg:w-auto" src="{{ site.theme.link }}/static/img/ensalada2.png" />
+      <img class="absolute top-32 lg:top-auto lg:bottom-0 left-0 w-36 lg:w-auto hidden lg:block" src="{{ site.theme.link }}/static/img/galleta.png" />
+      <img class="absolute top-32 lg:top-auto lg:bottom-0 right-0 w-36 lg:w-auto hidden lg:block" src="{{ site.theme.link }}/static/img/ensalada2.png" />
     </div>
   </div>
 
@@ -121,7 +132,7 @@
   <div id="contacto" class="w-full h-screen">
     <div class="container h-screen mx-auto lg:flex">
       <div class="w-full flex justify-center items-center">
-        <img class="w-44 lg:w-auto" src="{{ site.theme.link }}/static/img/ensalada2.png" />
+        <img class="w-28 lg:w-auto" src="{{ site.theme.link }}/static/img/ensalada2.png" />
       </div>
       <div class="w-full p-4 flex justify-center items-center">
         <div class="w-full">

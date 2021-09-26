@@ -22,5 +22,5 @@ nav.nav-main li.menu-item-has-children:hover ul {
     @apply w-full;
 }
 .attachment-woocommerce_thumbnail {
-    @apply mx-auto;
+    @apply mx-auto rounded-md bg-white transition-all duration-200;
 }
