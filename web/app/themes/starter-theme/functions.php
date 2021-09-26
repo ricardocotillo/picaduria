@@ -13,6 +13,10 @@
  * to load your dependencies and initialize Timber. If you are using Timber via the WordPress.org
  * plug-in, you can safely delete this block.
  */
+
+use Carbon_Fields\Container;
+use Carbon_Fields\Field;
+
 $composer_autoload = __DIR__ . '/vendor/autoload.php';
 if ( file_exists( $composer_autoload ) ) {
 	require_once $composer_autoload;
@@ -68,6 +72,7 @@ Timber::$autoescape = false;
 class StarterSite extends Timber\Site {
 	/** Add timber support. */
 	public function __construct() {
+		add_action( 'after_setup_theme', array($this, 'crb_load') );
 		add_action( 'after_setup_theme', array( $this, 'theme_supports' ) );
 		add_filter( 'timber/context', array( $this, 'add_to_context' ) );
 		add_filter( 'timber/twig', array( $this, 'add_to_twig' ) );
@@ -78,6 +83,7 @@ class StarterSite extends Timber\Site {
 		add_action( 'wp_enqueue_scripts', array( $this, 'add_scripts' ) );
 		add_filter( 'woocommerce_enqueue_styles', '__return_false' );
 		add_filter( 'script_loader_tag', array($this, 'defer_parsing_of_js') );
+		add_action( 'carbon_fields_register_fields', array($this, 'crb_attach_theme_options') );
 
 		parent::__construct();
 	}
@@ -111,7 +117,20 @@ class StarterSite extends Timber\Site {
 		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
 		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
 		remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
-	 }
+	}
+
+	public function crb_load() {
+		\Carbon_Fields\Carbon_Fields::boot();
+	}
+
+	public function crb_attach_theme_options() {
+		Container::make( 'theme_options', __( 'Social Links' ) )
+			->add_fields( array(
+				Field::make( 'text', 'crb_facebook_link', __( 'Facebook Link' ) ),
+				Field::make( 'text', 'crb_instagram_link', __( 'Instagram Link' ) ),
+				Field::make( 'text', 'crb_whatsapp_link', __( 'Whatsapp Link' ) ),
+			) );
+	}
 
 	/** This is where you add some context
 	 *
