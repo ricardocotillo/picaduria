@@ -1,6 +1,4 @@
 jQuery( document ).ready( function( $ ) {
-  // Your JavaScript goes here
-
   // Parallax
   const rellax = new Rellax('.rellax')
 

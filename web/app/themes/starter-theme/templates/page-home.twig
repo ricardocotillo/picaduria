@@ -3,74 +3,73 @@
 {% block content %}
   <div id="home" class="w-full h-screen relative" style="background: url({{ site.theme.link }}/static/img/texture.png);">
     <div class="container mx-auto">
-      <img class="w-2/3 mx-auto" src="{{ site.theme.link }}/static/img/hacemos.png" />
+      <img class="w-full lg:w-2/3 mx-auto" src="{{ site.theme.link }}/static/img/hacemos.png" />
     </div>
+    {# Otros #}
+    <img
+      data-rellax-speed="7" 
+      class="absolute w-32 right-11 lg:right-40 top-2/3 lg:top-1/3 rellax"
+      src="{{ site.theme.link }}/static/img/fruto3.png"
+    />
+    <img
+      data-rellax-speed="10" 
+      class="absolute w-32 left-10 lg:left-1/3 bottom-12 rellax z-40"
+      src="{{ site.theme.link }}/static/img/fruto3.png"
+    />
 
     {# Pecanas #}
     <img
       data-rellax-speed="5"
-      class="absolute -left-10 top-1/3 rellax z-40"
+      class="absolute w-44 lg:w-auto -left-10 top-1/3 rellax z-40"
       src="{{ site.theme.link }}/static/img/fruto1.png"
     />
     <img
       data-rellax-speed="6"
-      class="absolute left-48 top-20 rellax z-40"
+      class="absolute left-10 w-24 lg:w-auto lg:left-48 top-20 rellax z-40"
       src="{{ site.theme.link }}/static/img/fruto4.png"
     />
     <img
       data-rellax-speed="7"
       style="transform: scaleX(-1)"
-      class="absolute w-20 right-1/4 top-20 rellax z-40"
+      class="absolute w-20 right-1/4 top-10 lg:top-20 rellax z-40"
       src="{{ site.theme.link }}/static/img/fruto4.png"
     />
 
     {# Cashews #}
     <img
-      data-rellax-speed="12"
-      class="absolute right-28 top-1/2 w-20 rellax"
+      data-rellax-speed="10"
+      class="absolute right-10 lg:right-28 top-1/2 w-20 rellax"
       src="{{ site.theme.link }}/static/img/fruto6.png"
     />
     <img
       data-rellax-speed="6"
-      class="absolute left-1/3 top-0 rellax"
+      class="absolute w-14 lg:w-auto left-1/3 top-0 rellax"
       src="{{ site.theme.link }}/static/img/fruto7.png"
     />
 
     {# Almendras #}
     <img
-      data-rellax-speed="9"
+      data-rellax-speed="2"
       style="transform: rotate(130deg)"
       class="absolute left-1/3 top-1/2 w-20 rellax"
       src="{{ site.theme.link }}/static/img/almendra2.png"
     />
     <img
-      data-rellax-speed="7"
+      data-rellax-speed="10"
       style="transform: rotate(45deg)"
       class="absolute -right-16 top-32 w-40 rellax z-40"
       src="{{ site.theme.link }}/static/img/fruto5.png"
     />
     <img
       data-rellax-speed="5"
-      class="absolute -right-10 bottom-0 w-80 rellax z-40"
+      class="absolute w-60 lg:w-80 -right-10 bottom-0 rellax z-40"
       src="{{ site.theme.link }}/static/img/fruto2.png"
-    />
-
-    {# Otros #}
-    <img
-      data-rellax-speed="7" 
-      class="absolute w-32 right-40 top-1/3 rellax"
-      src="{{ site.theme.link }}/static/img/fruto3.png"
-    />
-    <img
-      data-rellax-speed="10" 
-      class="absolute w-32 left-1/3 bottom-12 rellax z-40"
-      src="{{ site.theme.link }}/static/img/fruto3.png"
     />
   </div>
 
   <div id="nosotros" class="w-full h-screen flex flex-col justify-center" style="background-image: url({{ site.theme.link }}/static/img/texture.png);">
     <div class="container mx-auto">
-      <img class="w-1/2 mx-auto" src="{{ site.theme.link }}/static/img/productos.png" />
+      <img class="w-full lg:w-1/2 mx-auto" src="{{ site.theme.link }}/static/img/productos.png" />
       <p class="text-brown font-arsilon text-5xl text-center">Los mejores frutos secos, directamente del productor, seleccionados para que puedan ser dignos de tu mesa</p>
     </div>
   </div>
@@ -80,44 +79,49 @@
   </div>
 
   <div class="w-full h-screen bg-pink flex items-center">
-    <div class="container mx-auto flex justify-center items-center">
+    <div class="container mx-auto flex justify-start lg:justify-center items-center">
       <div class="grid grid-cols-1 grid-rows-1 items-center">
-        <p class="text-13xl ml-72 mb-0 font-arsilon text-white col-start-1 col-end-1 row-start-1 row-end-1">Cashew</p>
-        <img class="col-start-1 col-end-1 row-start-1 row-end-1" src="{{ site.theme.link }}/static/img/cashew_perspective.webp" />
+        <p class="text-7xl lg:text-13xl ml-32 lg:ml-72 mb-0 font-arsilon text-white col-start-1 col-end-1 row-start-1 row-end-1">Cashew</p>
+        <img class="w-56 lg:w-auto col-start-1 col-end-1 row-start-1 row-end-1" src="{{ site.theme.link }}/static/img/cashew_perspective.webp" />
       </div>
     </div>
   </div>
 
   <div class="w-full h-screen bg-green flex items-center">
-    <div class="container mx-auto flex justify-center items-center">
+    <div class="container mx-auto flex justify-start lg:justify-center items-center">
       <div class="grid grid-cols-1 grid-rows-1 items-center">
-        <p class="text-13xl ml-72 mb-0 font-arsilon text-white col-start-1 col-end-1 row-start-1 row-end-1">Almendras</p>
-        <img class="col-start-1 col-end-1 row-start-1 row-end-1" src="{{ site.theme.link }}/static/img/almond_perspective.webp" />
+        <p class="text-7xl lg:text-13xl ml-32 lg:ml-72 mb-0 font-arsilon text-white col-start-1 col-end-1 row-start-1 row-end-1">Almendras</p>
+        <img class="w-56 lg:w-auto col-start-1 col-end-1 row-start-1 row-end-1" src="{{ site.theme.link }}/static/img/almond_perspective.webp" />
       </div>
     </div>
   </div>
 
   <div id="momentos" class="w-full h-screen bg-warmGray-200 relative">
     <div class="container mx-auto relative h-screen flex justify-center items-center">
-      <p class="w-1/2 text-lg text-center text-brown">Los frutos secos son una excelente fuente de nutrientes escenciales. Aportan un elevado contenido de proteinas, antioxidantes, fibra, minerales
+      <p class="lg:w-1/2 text-base lg:text-lg text-center text-brown">Los frutos secos son una excelente fuente de nutrientes escenciales. Aportan un elevado contenido de proteinas, antioxidantes, fibra, minerales
       y vitaminas B y E. A lo que se añade que las grasas que contienen son 'buenas', es decir monoinsaturadas y poliinsaturadas. Estas ayudan a disminuir
       los niveles de colesterol LDL, bajan los triglicéridos, disminuyen la coagulación de la sangre y mejoran la salud de los vasos sanguíneos</p>
       <img
         data-rellax-speed="1.5"
         style="transform: translateX(-50%)"
-        class="absolute bottom-0 left-1/2 rellax"
+        class="absolute bottom-0 left-1/2 rellax w-52 lg:w-auto hidden lg:block"
         src="{{ site.theme.link }}/static/img/ensalada1.png"
       />
-      <img class="absolute bottom-0 left-0" src="{{ site.theme.link }}/static/img/galleta.png" />
-      <img class="absolute bottom-0 right-0" src="{{ site.theme.link }}/static/img/ensalada2.png" />
+      <img
+        style="transform: translateX(-50%)"
+        class="absolute top-0 left-1/2 w-36 lg:hidden"
+        src="{{ site.theme.link }}/static/img/ensalada1.png"
+      />
+      <img class="absolute top-32 lg:top-auto lg:bottom-0 left-0 w-36 lg:w-auto" src="{{ site.theme.link }}/static/img/galleta.png" />
+      <img class="absolute top-32 lg:top-auto lg:bottom-0 right-0 w-36 lg:w-auto" src="{{ site.theme.link }}/static/img/ensalada2.png" />
     </div>
   </div>
 
   {# <div id="contacto" class="w-full h-screen" style="background: linear-gradient(90deg, #FFC0CB 50%, #00FFFF 50%)"> #}
   <div id="contacto" class="w-full h-screen">
-    <div class="container h-screen mx-auto flex">
+    <div class="container h-screen mx-auto lg:flex">
       <div class="w-full flex justify-center items-center">
-        <img src="{{ site.theme.link }}/static/img/ensalada2.png" />
+        <img class="w-44 lg:w-auto" src="{{ site.theme.link }}/static/img/ensalada2.png" />
       </div>
       <div class="w-full p-4 flex justify-center items-center">
         <div class="w-full">
