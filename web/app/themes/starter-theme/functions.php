@@ -77,6 +77,7 @@ class StarterSite extends Timber\Site {
 		add_filter( 'use_block_editor_for_post_type', array( $this, 'disable_gutenberg_editor' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'add_scripts' ) );
 		add_filter( 'woocommerce_enqueue_styles', '__return_false' );
+		add_filter( 'script_loader_tag', array($this, 'defer_parsing_of_js') );
 
 		parent::__construct();
 	}
@@ -94,7 +95,15 @@ class StarterSite extends Timber\Site {
 	}
 
 	public function add_scripts() {
-		wp_enqueue_script( 'rc_site_js', get_template_directory_uri() . '/static\/site.js', array( 'jquery' ) );
+		wp_enqueue_script( 'rc_rellax_js', 'https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js', null );
+		wp_enqueue_script( 'rc_site_js', get_template_directory_uri() . '/static\/site.js', array( 'jquery', 'rc_rellax_js' ) );
+	}
+
+	public function defer_parsing_of_js( $url ) {
+		if ( is_admin() ) return $url; //don't break WP Admin
+		if ( FALSE === strpos( $url, '.js' ) ) return $url;
+		if ( strpos( $url, 'jquery.js' ) ) return $url;
+		return str_replace( ' src', ' defer src', $url );
 	}
 
 	public function hide_price_add_cart() {
@@ -109,9 +118,7 @@ class StarterSite extends Timber\Site {
 	 * @param string $context context['this'] Being the Twig's {{ this }}.
 	 */
 	public function add_to_context( $context ) {
-		$context['foo']   = 'bar';
-		$context['stuff'] = 'I am a value set in your functions.php file';
-		$context['notes'] = 'These values are available everytime you call Timber::context();';
+		$context['is_front_page'] = is_front_page();
 		$context['menu']  = new Timber\Menu();
 		$context['site']  = $this;
 		$context['custom_logo_url'] = wp_get_attachment_image_url( get_theme_mod( 'custom_logo' ), 'full' );;
@@ -205,7 +212,7 @@ class StarterSite extends Timber\Site {
 	public function add_to_twig( $twig ) {
 		$twig->addExtension( new Twig\Extension\StringLoaderExtension() );
 		$twig->addFilter( new Twig\TwigFilter( 'myfoo', array( $this, 'myfoo' ) ) );
-		$twig->addFunction( new Timber\Twig_Function( 'is_front_page', 'is_front_page' ) );
+		// $twig->addFunction( new Timber\Twig_Function( 'is_front_page', 'is_front_page' ) );
 		return $twig;
 	}
 

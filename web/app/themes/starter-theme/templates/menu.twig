@@ -2,7 +2,7 @@
 	<ul class="{% if sub_menu %}bg-white md:absolute md:rounded-sm shadow-sm md:hidden{% else %}block md:flex justify-around{% endif %}">
 	{% for item in items %}
 		<li class="{{ item.classes | join(' ') }} px-4 py-2">
-			<a target="{{ item.target }} {% if item.children|length > 0 %}{% endif %}" href="{{ item.link }}">{{ item.title }}</a>
+			<a target="{{ item.target }}" href="{% if is_front_page %}{{ item.link }}{% else %}{{ site.url }}/{{ item.link }}{% endif %}">{{ item.title }}</a>
 			{% if item.children|length > 0 %}
 				{% include "menu.twig" with {'items': item.children, 'sub_menu': true} %}
 			{% endif %}
