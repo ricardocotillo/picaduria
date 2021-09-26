@@ -1207,6 +1207,11 @@ select {
   background-color: rgba(231, 229, 228, var(--tw-bg-opacity));
 }
 
+.bg-warmGray-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(68, 64, 60, var(--tw-bg-opacity));
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -1268,6 +1273,10 @@ select {
 
 .font-bold {
   font-weight: 700;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 .text-brown {

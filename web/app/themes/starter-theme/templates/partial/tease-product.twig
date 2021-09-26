@@ -1,7 +1,7 @@
 <article {{ fn('post_class', ['$classes', 'entry'] ) }}>
   {{ function('timber_set_product', post) }}
 
-  <div class="media mx-5 md:mx-0 mb-3 md:mb-0 bg-white rounded-md overflow-hidden relative">
+  <div class="media mx-5 md:mx-0 mb-3 md:mb-0 relative">
 
     {% if showthumb %}
       <div class="media-figure {% if not post.thumbnail %}placeholder{% endif %}">
@@ -22,13 +22,17 @@
         class="product-zoom absolute w-8 right-2 top-2 cursor-pointer"
         src="{{ site.theme.link }}/static/icons/zoom-in.svg"
       />
-      {% do action('woocommerce_before_shop_loop_item_title') %}
+      <div class="bg-white rounded-md overflow-hidden">
+        {% do action('woocommerce_before_shop_loop_item_title') %}
+      </div>
 
-      {# {% if post.title %}
-          <h3 class="entry-title"><a href="{{ post.link }}">{{ post.title }}</a></h3>
+      {% if post.title %}
+          {# <h3 class="entry-title text-brown text-lg font-semibold"><a href="{{ post.link }}">{{ post.title }}</a></h3> #}
+          <h3 class="entry-title text-brown text-lg font-semibold">{{ post.title }}</h3>
       {% else %}
-          <h3 class="entry-title"><a href="{{ post.link }}">{{ fn('the_title') }}</a></h3>
-      {% endif %} #}
+          {# <h3 class="entry-title text-brown text-lg font-semibold"><a href="{{ post.link }}">{{ fn('the_title') }}</a></h3> #}
+          <h3 class="entry-title text-brown text-lg font-semibold">{{ fn('the_title') }}</h3>
+      {% endif %}
 
       {% do action( 'woocommerce_after_shop_loop_item_title' ) %}
       {% do action( 'woocommerce_after_shop_loop_item' ) %}
