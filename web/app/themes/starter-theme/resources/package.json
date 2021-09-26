@@ -14,7 +14,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "npx tailwindcss -i ./src/styles.css -o ../static/main.css --watch"
+    "watch": "npx tailwindcss -i ./src/styles.css -o ../static/main.css --watch",
+    "build": "npx tailwindcss -i ./src/styles.css -o ../static/main.css"
   },
   "keywords": [],
   "author": "",
