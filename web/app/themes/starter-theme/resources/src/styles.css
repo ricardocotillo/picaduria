@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+#content {
+    scroll-behavior: smooth;
+}
+
 .woocommerce-breadcrumb {
     @apply hidden;
 }
