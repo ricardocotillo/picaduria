@@ -1024,6 +1024,10 @@ select {
   height: 100vh;
 }
 
+.h-14 {
+  height: 3.5rem;
+}
+
 .w-full {
   width: 100%;
 }
@@ -1379,6 +1383,10 @@ nav.nav-main li.menu-item-has-children:hover ul {
     margin-bottom: 0px;
   }
 
+  .md\:mt-10 {
+    margin-top: 2.5rem;
+  }
+
   .md\:flex {
     display: flex;
   }
@@ -1391,6 +1399,10 @@ nav.nav-main li.menu-item-has-children:hover ul {
     display: none;
   }
 
+  .md\:h-24 {
+    height: 6rem;
+  }
+
   .md\:w-28 {
     width: 7rem;
   }
@@ -1401,6 +1413,26 @@ nav.nav-main li.menu-item-has-children:hover ul {
 
   .md\:w-3\/4 {
     width: 75%;
+  }
+
+  .md\:w-40 {
+    width: 10rem;
+  }
+
+  .md\:w-48 {
+    width: 12rem;
+  }
+
+  .md\:w-60 {
+    width: 15rem;
+  }
+
+  .md\:w-full {
+    width: 100%;
+  }
+
+  .md\:w-52 {
+    width: 13rem;
   }
 
   .md\:transform-none {
