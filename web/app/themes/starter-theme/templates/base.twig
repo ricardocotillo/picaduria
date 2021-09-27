@@ -10,7 +10,7 @@
 		<header class="header w-full sticky top-0 bg-white z-40" >
 			{% block header %}
 				<div class="wrapper block md:flex justify-between items-center container mx-auto md:h-24">
-					<div class="flex">
+					<div class="hidden md:flex">
             <a class="mr-2" href="{{ facebook }}"><img class="w-6" src="{{ site.theme.link }}/static/icons/facebook.svg" /></a>
             <a class="mr-2" href="{{ instagram }}"><img class="w-6" src="{{ site.theme.link }}/static/icons/instagram.svg" /></a>
             <a href="{{ whatsapp }}"><img class="w-6 " src="{{ site.theme.link }}/static/icons/whatsapp.svg" /></a>
@@ -23,10 +23,15 @@
 						{% include "menu.twig" with {'items': menu.get_items} %}
 					</nav><!-- #nav -->
           
-          <div class="flex justify-between w-full md:w-52 h-14 md:h-auto">
+          <div class="flex justify-between items-center w-full md:w-52 h-14 md:h-auto">
 					  <div class="md:hidden">
               <img class="w-10 p-2 cursor-pointer hidden hamburger" src="{{ site.theme.link }}/static/icons/cancel.svg" />
               <img class="w-10 p-2 cursor-pointer hamburger" src="{{ site.theme.link }}/static/icons/menu.svg" />
+            </div>
+            <div class="flex md:hidden">
+              <a class="mr-2" href="{{ facebook }}"><img class="w-6" src="{{ site.theme.link }}/static/icons/facebook.svg" /></a>
+              <a class="mr-2" href="{{ instagram }}"><img class="w-6" src="{{ site.theme.link }}/static/icons/instagram.svg" /></a>
+              <a href="{{ whatsapp }}"><img class="w-6 " src="{{ site.theme.link }}/static/icons/whatsapp.svg" /></a>
             </div>
             <a class="hdr-logo-link z-20 md:z-auto" href="{% if is_front_page %}#home{% else %}{{site.url}}{% endif %}" rel="home"><img class="custom-logo w-28 md:mt-10 md:w-full" src="{{ site.theme.link }}/static/img/logo_fondo_blanco.svg" /></a>
           </div>
