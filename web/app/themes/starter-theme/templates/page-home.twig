@@ -78,20 +78,29 @@
     <video autoplay loop muted class="w-full" src="{{ site.theme.link }}/static/vid/productos.mp4"></video>
   </div>
 
-  <div class="w-full h-screen bg-pink flex items-center">
-    <div class="container mx-auto flex justify-start lg:justify-center items-center">
-      <div class="grid grid-cols-1 grid-rows-1 items-center">
-        <p class="text-5xl sm:text-7xl lg:text-13xl ml-32 lg:ml-72 mb-0 font-arsilon text-white col-start-1 col-end-1 row-start-1 row-end-1">Cashew</p>
-        <img class="w-56 lg:w-auto col-start-1 col-end-1 row-start-1 row-end-1" src="{{ site.theme.link }}/static/img/cashew_perspective.webp" />
-      </div>
-    </div>
-  </div>
-
-  <div class="w-full h-screen bg-green flex items-center">
-    <div class="container mx-auto flex justify-start lg:justify-center items-center">
-      <div class="grid grid-cols-1 grid-rows-1 items-center">
-        <p class="text-5xl sm:text-7xl lg:text-13xl ml-32 lg:ml-72 mb-0 font-arsilon text-white col-start-1 col-end-1 row-start-1 row-end-1">Almendras</p>
-        <img class="w-56 lg:w-auto col-start-1 col-end-1 row-start-1 row-end-1" src="{{ site.theme.link }}/static/img/almond_perspective.webp" />
+  <div class="splide">
+    <div class="splide__track">
+      <div class="splide__list">
+        <div class="splide__slide">
+          <div class="w-full h-screen bg-pink flex items-center">
+            <div class="container mx-auto flex justify-start lg:justify-center items-center">
+              <div class="grid grid-cols-1 grid-rows-1 items-center">
+                <p class="text-5xl sm:text-7xl lg:text-13xl ml-32 lg:ml-72 mb-0 font-arsilon text-white col-start-1 col-end-1 row-start-1 row-end-1">Cashew</p>
+                <img class="w-56 lg:w-auto col-start-1 col-end-1 row-start-1 row-end-1" src="{{ site.theme.link }}/static/img/cashew_perspective.webp" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="splide__slide">
+          <div class="w-full h-screen bg-green flex items-center">
+            <div class="container mx-auto flex justify-start lg:justify-center items-center">
+              <div class="grid grid-cols-1 grid-rows-1 items-center">
+                <p class="text-5xl sm:text-7xl lg:text-13xl ml-32 lg:ml-72 mb-0 font-arsilon text-white col-start-1 col-end-1 row-start-1 row-end-1">Almendras</p>
+                <img class="w-56 lg:w-auto col-start-1 col-end-1 row-start-1 row-end-1" src="{{ site.theme.link }}/static/img/almond_perspective.webp" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -118,7 +127,7 @@
         src="{{ site.theme.link }}/static/img/flecha_verde.png"
       />
       <img
-        data-rellax-speed="1.5"
+        data-rellax-speed="2"
         style="transform: translateX(-50%)"
         class="absolute bottom-0 left-1/2 rellax w-36 lg:w-80 xl:w-auto hidden lg:block"
         src="{{ site.theme.link }}/static/img/ensalada1.png"

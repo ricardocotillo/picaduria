@@ -65,4 +65,10 @@ jQuery( document ).ready( function( $ ) {
 
     }
   })
+
+  // Slider
+  new Splide('.splide', {
+    autoplay: true,
+    loop: true,
+  }).mount();
 });
