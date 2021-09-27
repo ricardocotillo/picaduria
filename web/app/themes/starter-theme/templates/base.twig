@@ -7,12 +7,12 @@
 {% endblock %}
 	<body class="{{body_class}}" data-template="base.twig">
 		<a class="skip-link screen-reader-text" href="#content">{{ _e( 'Skip to content') }}</a>
-		<header class="header w-full md:sticky top-0 bg-white z-40" >
+		<header class="header w-full sticky top-0 bg-white z-40" >
 			{% block header %}
 				<div class="wrapper block md:flex justify-between items-center container mx-auto md:h-24">
 					<nav
             id="nav-main"
-            class="nav-main absolute md:static w-full font-phosphate-inline text-brown text-2xl bg-white z-10 transform -translate-x-full md:transform-none transition-transform"
+            class="mt-14 md:mt-0 nav-main absolute md:static w-full font-phosphate-inline text-brown text-2xl bg-white z-10 transform -translate-x-full md:transform-none transition-transform"
             role="navigation"
           >
 						{% include "menu.twig" with {'items': menu.get_items} %}

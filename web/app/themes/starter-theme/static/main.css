@@ -833,6 +833,10 @@ select {
   position: relative;
 }
 
+.sticky {
+  position: sticky;
+}
+
 .top-0 {
   top: 0px;
 }
@@ -1011,6 +1015,10 @@ select {
 
 .mr-2 {
   margin-right: 0.5rem;
+}
+
+.mt-14 {
+  margin-top: 3.5rem;
 }
 
 .block {
@@ -1436,6 +1444,10 @@ nav.nav-main li.menu-item-has-children:hover ul {
 
   .md\:mt-10 {
     margin-top: 2.5rem;
+  }
+
+  .md\:mt-0 {
+    margin-top: 0px;
   }
 
   .md\:flex {
