@@ -17,12 +17,12 @@
           >
 						{% include "menu.twig" with {'items': menu.get_items} %}
 					</nav><!-- #nav -->
-          <div class="flex justify-between w-full md:w-52">
+          <div class="flex justify-between w-full md:w-52 h-14 md:h-auto">
 					  <div class="md:hidden">
               <img class="w-10 p-2 cursor-pointer hidden hamburger" src="{{ site.theme.link }}/static/icons/cancel.svg" />
               <img class="w-10 p-2 cursor-pointer hamburger" src="{{ site.theme.link }}/static/icons/menu.svg" />
             </div>
-            <a class="hdr-logo-link" href="{% if is_front_page %}#home{% else %}{{site.url}}{% endif %}" rel="home"><img class="custom-logo w-28 md:mt-10 md:w-full" src="{{ site.theme.link }}/static/img/logo_fondo_blanco.svg" /></a>
+            <a class="hdr-logo-link z-20 md:z-auto" href="{% if is_front_page %}#home{% else %}{{site.url}}{% endif %}" rel="home"><img class="custom-logo w-28 md:mt-10 md:w-full" src="{{ site.theme.link }}/static/img/logo_fondo_blanco.svg" /></a>
           </div>
 				</div>
 			{% endblock %}

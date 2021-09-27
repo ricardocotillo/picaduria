@@ -957,6 +957,10 @@ select {
   z-index: 10;
 }
 
+.z-20 {
+  z-index: 20;
+}
+
 .col-start-1 {
   grid-column-start: 1;
 }
@@ -1374,6 +1378,10 @@ nav.nav-main li.menu-item-has-children:hover ul {
     position: sticky;
   }
 
+  .md\:z-auto {
+    z-index: auto;
+  }
+
   .md\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
@@ -1401,6 +1409,10 @@ nav.nav-main li.menu-item-has-children:hover ul {
 
   .md\:h-24 {
     height: 6rem;
+  }
+
+  .md\:h-auto {
+    height: auto;
   }
 
   .md\:w-28 {
