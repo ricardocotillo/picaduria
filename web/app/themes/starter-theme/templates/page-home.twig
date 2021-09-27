@@ -1,7 +1,7 @@
 {% extends "base.twig" %}
 
 {% block content %}
-  <div id="home" class="w-full h-screen relative" style="background: url({{ site.theme.link }}/static/img/texture.png);">
+  <div id="home" class="w-full h-screen relative" style="background: url({{ site.theme.link }}/static/img/texture.webp);">
     <div class="container mx-auto">
       <img class="w-full lg:w-2/3 mx-auto" src="{{ site.theme.link }}/static/img/hacemos.png" />
     </div>
@@ -67,15 +67,15 @@
     />
   </div>
 
-  <div id="nosotros" class="w-full h-screen flex flex-col justify-center" style="background-image: url({{ site.theme.link }}/static/img/texture.png);">
+  <div id="nosotros" class="w-full h-screen flex flex-col justify-center" style="background-image: url({{ site.theme.link }}/static/img/texture.webp);">
     <div class="container mx-auto">
       <img class="w-full lg:w-1/2 mx-auto" src="{{ site.theme.link }}/static/img/productos.png" />
       <p class="text-brown font-arsilon text-2xl sm:text-5xl text-center">Los mejores frutos secos, directamente del productor, seleccionados para que puedan ser dignos de tu mesa</p>
     </div>
   </div>
 
-  <div class="w-full">
-    <video autoplay muted class="w-full" src="{{ site.theme.link }}/static/vid/productos.mp4"></video>
+  <div id="disfrutos" class="w-full">
+    <video autoplay loop muted class="w-full" src="{{ site.theme.link }}/static/vid/productos.mp4"></video>
   </div>
 
   <div class="w-full h-screen bg-pink flex items-center">

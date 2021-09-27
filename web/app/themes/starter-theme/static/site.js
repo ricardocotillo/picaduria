@@ -8,6 +8,7 @@ jQuery( document ).ready( function( $ ) {
   const zoom = $('.product-zoom')
   const nav = $('#nav-main')
   const body = $('body')
+  const video = $('#disfrutos video')
   let currentShowcase;
 
   // Showcase
@@ -58,4 +59,10 @@ jQuery( document ).ready( function( $ ) {
     nav.toggleClass('active')
   })
 
+  // Video
+  video.on('timeupdate', function(e) {
+    if (this.currentTime >= 7) {
+
+    }
+  })
 });
