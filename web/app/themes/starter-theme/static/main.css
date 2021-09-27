@@ -953,6 +953,62 @@ select {
   top: 1rem;
 }
 
+.top-5 {
+  top: 1.25rem;
+}
+
+.top-7 {
+  top: 1.75rem;
+}
+
+.bottom-10 {
+  bottom: 2.5rem;
+}
+
+.bottom-7 {
+  bottom: 1.75rem;
+}
+
+.left-3 {
+  left: 0.75rem;
+}
+
+.right-3 {
+  right: 0.75rem;
+}
+
+.bottom-5 {
+  bottom: 1.25rem;
+}
+
+.bottom-6 {
+  bottom: 1.5rem;
+}
+
+.bottom-20 {
+  bottom: 5rem;
+}
+
+.bottom-32 {
+  bottom: 8rem;
+}
+
+.bottom-44 {
+  bottom: 11rem;
+}
+
+.bottom-48 {
+  bottom: 12rem;
+}
+
+.bottom-56 {
+  bottom: 14rem;
+}
+
+.left-5 {
+  left: 1.25rem;
+}
+
 .z-40 {
   z-index: 40;
 }
@@ -1121,6 +1177,14 @@ select {
   width: 12rem;
 }
 
+.w-64 {
+  width: 16rem;
+}
+
+.w-16 {
+  width: 4rem;
+}
+
 .-translate-x-full {
   --tw-translate-x: -100%;
   transform: var(--tw-transform);
@@ -1128,6 +1192,21 @@ select {
 
 .-translate-x-1\/2 {
   --tw-translate-x: -50%;
+  transform: var(--tw-transform);
+}
+
+.-rotate-12 {
+  --tw-rotate: -12deg;
+  transform: var(--tw-transform);
+}
+
+.rotate-0 {
+  --tw-rotate: 0deg;
+  transform: var(--tw-transform);
+}
+
+.-rotate-45 {
+  --tw-rotate: -45deg;
   transform: var(--tw-transform);
 }
 
@@ -1247,6 +1326,10 @@ select {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
 }
 
 .text-center {
@@ -1582,6 +1665,10 @@ nav.nav-main li.menu-item-has-children:hover ul {
     bottom: 0px;
   }
 
+  .lg\:bottom-auto {
+    bottom: auto;
+  }
+
   .lg\:ml-72 {
     margin-left: 18rem;
   }
@@ -1631,12 +1718,26 @@ nav.nav-main li.menu-item-has-children:hover ul {
     transform: var(--tw-transform);
   }
 
+  .lg\:-translate-x-0 {
+    --tw-translate-x: 0px;
+    transform: var(--tw-transform);
+  }
+
+  .lg\:rotate-0 {
+    --tw-rotate: 0deg;
+    transform: var(--tw-transform);
+  }
+
   .lg\:flex-row {
     flex-direction: row;
   }
 
   .lg\:justify-center {
     justify-content: center;
+  }
+
+  .lg\:pt-0 {
+    padding-top: 0px;
   }
 
   .lg\:text-13xl {
