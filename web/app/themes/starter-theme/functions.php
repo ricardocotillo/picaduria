@@ -103,7 +103,8 @@ class StarterSite extends Timber\Site {
 	public function add_scripts() {
 		wp_enqueue_script( 'rc_rellax_js', 'https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js', null );
 		wp_enqueue_script( 'rc_splide_js', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/js/splide.min.js', null );
-		wp_enqueue_script( 'rc_site_js', get_template_directory_uri() . '/static\/site.js', array( 'jquery', 'rc_rellax_js', 'rc_splide_js' ) );
+		wp_enqueue_script( 'rc_waypoints_js', 'https://cdn.jsdelivr.net/npm/waypoints@4.0.1/lib/jquery.waypoints.min.js', null );
+		wp_enqueue_script( 'rc_site_js', get_template_directory_uri() . '/static\/site.js', array( 'jquery', 'rc_rellax_js', 'rc_splide_js', 'rc_waypoints_js' ) );
 	}
 
 	public function defer_parsing_of_js( $url ) {

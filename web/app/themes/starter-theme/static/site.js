@@ -3,12 +3,14 @@ jQuery( document ).ready( function( $ ) {
   const rellax = new Rellax('.rellax')
 
   // variables
+  let cloned = false
   const ham = $('.hamburger')
   const showcase = $('#showcase')
   const zoom = $('.product-zoom')
   const nav = $('#nav-main')
   const body = $('body')
   const video = $('#disfrutos video')
+  const nosotros = $('#nosotros')
   let currentShowcase;
 
   // Showcase
@@ -71,4 +73,20 @@ jQuery( document ).ready( function( $ ) {
     autoplay: true,
     loop: true,
   }).mount();
+
+  // Waypoints
+  nosotros.waypoint({
+    handler(direction) {
+      if (direction === 'down' && !cloned) {
+        cloned = true
+        const frutos = $('#home .rellax').clone()
+        $('#nosotros .container').append(frutos)
+        setTimeout(function() {
+          rellax.destroy()
+          rellax = new Rellax('.rellax')
+        }, 500)
+      }
+    },
+    offset: '100%'
+  })
 });
