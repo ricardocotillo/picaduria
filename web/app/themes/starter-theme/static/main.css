@@ -1096,6 +1096,10 @@ select {
   width: 75%;
 }
 
+.w-48 {
+  width: 12rem;
+}
+
 .-translate-x-full {
   --tw-translate-x: -100%;
   transform: var(--tw-transform);
@@ -1186,6 +1190,11 @@ select {
   background-color: rgba(231, 229, 228, var(--tw-bg-opacity));
 }
 
+.bg-brown {
+  --tw-bg-opacity: 1;
+  background-color: rgba(73, 18, 18, var(--tw-bg-opacity));
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -1209,6 +1218,16 @@ select {
   padding-bottom: 2.5rem;
 }
 
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1219,6 +1238,10 @@ select {
 
 .font-arsilon {
   font-family: Arsilon;
+}
+
+.font-phosphate {
+  font-family: Phosphate;
 }
 
 .text-2xl {
@@ -1243,6 +1266,11 @@ select {
 
 .text-lg {
   font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
   line-height: 1.75rem;
 }
 

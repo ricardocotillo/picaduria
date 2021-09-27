@@ -138,7 +138,8 @@ class StarterSite extends Timber\Site {
 	 */
 	public function add_to_context( $context ) {
 		$context['is_front_page'] = is_front_page();
-		$context['menu']  = new Timber\Menu();
+		$context['menu']  = new Timber\Menu( 'header-menu' );
+		$context['footer_menu']  = new Timber\Menu( 'footer-menu' );
 		$context['site']  = $this;
 		$context['custom_logo_url'] = wp_get_attachment_image_url( get_theme_mod( 'custom_logo' ), 'full' );;
 		return $context;
@@ -240,7 +241,7 @@ class StarterSite extends Timber\Site {
 new StarterSite();
 
 // Admin 
-function admin_style() {
+function rc_admin_style() {
 	?>
 		<style type="text/css">
 			#login h1 a {
@@ -257,7 +258,17 @@ function admin_style() {
 		</style>
 	<?php
 }
-add_action( 'admin_enqueue_scripts', 'admin_style' );
+add_action( 'admin_enqueue_scripts', 'rc_admin_style' );
+
+function rc_custom_menus() {
+	register_nav_menus(
+		array(
+			'header-menu' => __( 'Header' ),
+			'footer-menu' => __( 'Footer' )
+		)
+	);
+}
+add_action( 'init', 'rc_custom_menus' );
 
 // function add_my_favicon() {
 // 	$favicon_path = get_template_directory_uri() . '/images/favicon.ico';
