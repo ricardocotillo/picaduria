@@ -238,3 +238,32 @@ class StarterSite extends Timber\Site {
 }
 
 new StarterSite();
+
+// Admin 
+function admin_style() {
+	?>
+		<style type="text/css">
+			#login h1 a {
+				background-image: url(<?php echo get_template_directory_uri() ?>/static/img/logo.svg);
+				padding: 60px;
+				background-size: contain;
+			}
+			#wpadminbar #wp-admin-bar-wp-logo > .ab-item .ab-icon:before {
+				background-position: center;
+				background-size: contain;
+				color: rgba(0, 0, 0, 0);
+				background-image: url(<?php echo get_template_directory_uri() ?>/static/img/logo_blanco.svg) !important;
+			}
+		</style>
+	<?php
+}
+add_action( 'admin_enqueue_scripts', 'admin_style' );
+
+// function add_my_favicon() {
+// 	$favicon_path = get_template_directory_uri() . '/images/favicon.ico';
+ 
+// 	echo '<link rel="shortcut icon" href="' . esc_url($favicon_path) . '" />';
+// }
+
+// add_action( 'wp_head', 'add_my_favicon' ); //front end
+// add_action( 'admin_head', 'add_my_favicon' ); //admin end
