@@ -125,7 +125,7 @@ class StarterSite extends Timber\Site {
 	}
 
 	public function crb_attach_theme_options() {
-		Container::make( 'theme_options', __( 'Social Links' ) )
+		Container::make( 'theme_options', 'rc-social-links', __( 'Social Links' ) )
 			->add_fields( array(
 				Field::make( 'text', 'crb_facebook_link', __( 'Facebook Link' ) )->set_default_value( '#' ),
 				Field::make( 'text', 'crb_instagram_link', __( 'Instagram Link' ) )->set_default_value( '#' ),
@@ -141,6 +141,9 @@ class StarterSite extends Timber\Site {
 		$context['is_front_page'] = is_front_page();
 		$context['menu']  = new Timber\Menu( 'header-menu' );
 		$context['footer_menu']  = new Timber\Menu( 'footer-menu' );
+		$context['facebook'] = carbon_get_theme_option( 'crb_facebook_link' );
+		$context['instagram'] = carbon_get_theme_option( 'crb_instagram_link' );
+		$context['whatsapp'] = carbon_get_theme_option( 'crb_whatsapp_link' );
 		$context['site']  = $this;
 		$context['custom_logo_url'] = wp_get_attachment_image_url( get_theme_mod( 'custom_logo' ), 'full' );;
 		return $context;

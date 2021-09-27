@@ -10,13 +10,19 @@
 		<header class="header w-full sticky top-0 bg-white z-40" >
 			{% block header %}
 				<div class="wrapper block md:flex justify-between items-center container mx-auto md:h-24">
-					<nav
+					<div class="flex">
+            <a class="mr-2" href="{{ facebook }}"><img class="w-6" src="{{ site.theme.link }}/static/icons/facebook.svg" /></a>
+            <a class="mr-2" href="{{ instagram }}"><img class="w-6" src="{{ site.theme.link }}/static/icons/instagram.svg" /></a>
+            <a href="{{ whatsapp }}"><img class="w-6 " src="{{ site.theme.link }}/static/icons/whatsapp.svg" /></a>
+          </div>
+          <nav
             id="nav-main"
             class="mt-14 md:mt-0 nav-main absolute md:static w-full font-phosphate-inline text-brown text-2xl bg-white z-10 transform -translate-x-full md:transform-none transition-transform"
             role="navigation"
           >
 						{% include "menu.twig" with {'items': menu.get_items} %}
 					</nav><!-- #nav -->
+          
           <div class="flex justify-between w-full md:w-52 h-14 md:h-auto">
 					  <div class="md:hidden">
               <img class="w-10 p-2 cursor-pointer hidden hamburger" src="{{ site.theme.link }}/static/icons/cancel.svg" />
