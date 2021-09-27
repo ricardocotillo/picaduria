@@ -1,13 +1,13 @@
-<div class="container mx-auto flex justify-between items-center">
+<div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
   <img class="w-48" src="{{ site.theme.link }}/static/img/logo.svg" />
-  <div class="">
+  <div class="text-center my-2 md:my-0">
     {% for item in menu.get_items %}
       <div class="text-brown text-base font-phosphate">
         <a target="{{ item.target }}" href="{% if is_front_page %}{{ item.link }}{% else %}{{ site.url }}/{{ item.link }}{% endif %}">{{ item.title }}</a>
       </div>
     {% endfor %}
   </div>
-  <div>
+  <div class="text-center my-2 md:my-0">
     {% for item in footer_menu.get_items %}
       <div class="text-brown text-base font-phosphate">
         <a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
@@ -15,6 +15,6 @@
     {% endfor %}
   </div>
 </div>
-<p class="text-center text-brown text-base font-bold">
+<p class="text-center text-brown text-sm font-bold">
   Copyright {{"now"|date('Y')}}
 </p>
