@@ -7,7 +7,7 @@ jQuery( document ).ready( function( $ ) {
   const showcase = $('#showcase')
   const zoom = $('.product-zoom')
   const nav = $('#nav-main')
-  const content = $('#content')
+  const body = $('body')
   let currentShowcase;
 
   // Showcase
@@ -20,20 +20,24 @@ jQuery( document ).ready( function( $ ) {
     const height = img.height()
     const x = horizontalCenterPoint - offset.left - (width / 2)
     const y = verticalCenterPoint - offset.top - (height / 2)
-    content.css('height', '100vh')
-    content.css('overflow', 'hidden')
+    body.css('height', '100vh')
+    body.css('overflow', 'hidden')
+    
     img.css('transform', `translate(${x}px, ${y}px)`)
     img.css('opacity', 0)
+
     const url = $(this).data('full')
     showcase.find('.showcase-img').attr('src', url)
     showcase.css('height', '100vh')
+    showcase.css('visibility', 'visible')
     showcase.css('opacity', 1)
     currentShowcase = img
   })
 
   showcase.find('.close').on('click', function(e) {
-    content.css('height', '')
-    content.css('overflow', '')
+    body.css('height', '')
+    body.css('overflow', '')
+    showcase.css('visibility', 'hidden')
     showcase.css('opacity', 0)
     showcase.css('height', 0)
     showcase.find('.showcase-img').attr('src', '')

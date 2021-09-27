@@ -817,6 +817,14 @@ select {
   }
 }
 
+.invisible {
+  visibility: hidden;
+}
+
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -1086,6 +1094,10 @@ select {
 
 .w-3\/4 {
   width: 75%;
+}
+
+.w-0 {
+  width: 0px;
 }
 
 .-translate-x-full {
