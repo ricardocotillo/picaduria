@@ -1604,13 +1604,13 @@ nav.nav-main li.menu-item-has-children:hover ul {
     width: 33.333333%;
   }
 
-  .lg\:-translate-y-full {
-    --tw-translate-y: -100%;
+  .lg\:translate-x-0 {
+    --tw-translate-x: 0px;
     transform: var(--tw-transform);
   }
 
-  .lg\:translate-x-0 {
-    --tw-translate-x: 0px;
+  .lg\:-translate-y-full {
+    --tw-translate-y: -100%;
     transform: var(--tw-transform);
   }
 
