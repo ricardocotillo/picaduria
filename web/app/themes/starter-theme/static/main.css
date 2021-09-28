@@ -969,12 +969,20 @@ select {
   grid-column-start: 1;
 }
 
+.col-end-2 {
+  grid-column-end: 2;
+}
+
 .col-end-1 {
   grid-column-end: 1;
 }
 
 .row-start-1 {
   grid-row-start: 1;
+}
+
+.row-end-2 {
+  grid-row-end: 2;
 }
 
 .row-end-1 {
@@ -1369,8 +1377,16 @@ select {
   transition-delay: 100ms;
 }
 
+.duration-500 {
+  transition-duration: 500ms;
+}
+
 .duration-200 {
   transition-duration: 200ms;
+}
+
+.scale-x-translate-z-0 {
+  transform: scale(0) translateZ(0)
 }
 
 html {
@@ -1554,6 +1570,10 @@ nav.nav-main li.menu-item-has-children:hover ul {
 
   .lg\:bottom-32 {
     bottom: 8rem;
+  }
+
+  .lg\:mt-24 {
+    margin-top: 6rem;
   }
 
   .lg\:ml-72 {

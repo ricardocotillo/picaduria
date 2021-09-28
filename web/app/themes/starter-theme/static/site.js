@@ -1,6 +1,6 @@
 jQuery( document ).ready( function( $ ) {
   // Parallax
-  const rellax = new Rellax('.rellax')
+  let rellax = new Rellax('.rellax')
 
   // variables
   let cloned = false
@@ -10,6 +10,8 @@ jQuery( document ).ready( function( $ ) {
   const nav = $('#nav-main')
   const body = $('body')
   const video = $('#disfrutos video')
+  const disfrutos = $('#disfrutos img')
+  let disfrutosShown = false
   const nosotros = $('#nosotros')
   let currentShowcase;
 
@@ -63,9 +65,17 @@ jQuery( document ).ready( function( $ ) {
 
   // Video
   video.on('timeupdate', function(e) {
-    if (this.currentTime >= 7) {
-
+    if (this.currentTime >= 7 && this.currentTime <= this.duration - 1 && !disfrutosShown) {
+      disfrutos.css('transform', 'scale(1) translateZ(0)')
+      disfrutosShown = true
+    } else if (this.currentTime < 7 && disfrutosShown) {
+      disfrutos.css('transform', '')
+      disfrutosShown = false
     }
+  })
+
+  video.on('ended', function() {
+    
   })
 
   // Slider
