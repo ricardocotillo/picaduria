@@ -275,11 +275,15 @@ function rc_custom_menus() {
 }
 add_action( 'init', 'rc_custom_menus' );
 
-// function add_my_favicon() {
-// 	$favicon_path = get_template_directory_uri() . '/images/favicon.ico';
- 
-// 	echo '<link rel="shortcut icon" href="' . esc_url($favicon_path) . '" />';
-// }
-
-// add_action( 'wp_head', 'add_my_favicon' ); //front end
-// add_action( 'admin_head', 'add_my_favicon' ); //admin end
+function rc_send_email_to_admin() {
+	$name = $_POST['name'];
+	$email = $_POST['email'];
+	$message = $_POST['message'];
+	$headers = array('Content-Type: text/html; charset=UTF-8');
+	$email_message = 'Nuevo mensaje de contacto de '.$name.':<br/><br/>'.$message.'<br/><br/>Puedes contactarte con la persona al correo: '.$email;
+	wp_mail( 'ricardo.cotillo@gmail.com', 'Nuevo mensaje de contacto', $email_message, $headers );
+	wp_redirect( home_url(  ) );
+	exit();
+}
+add_action( 'admin_post_nopriv_contact_form', 'rc_send_email_to_admin' );
+add_action( 'admin_post_contact_form', 'rc_send_email_to_admin' );

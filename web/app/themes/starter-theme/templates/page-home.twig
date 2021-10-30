@@ -89,6 +89,7 @@
   <div class="splide">
     <div class="splide__track">
       <div class="splide__list">
+        {# Slide 1 #}
         <div class="splide__slide">
           <div class="w-full h-screen bg-pink flex items-center">
             <div class="container mx-auto flex justify-start lg:justify-center items-center">
@@ -99,12 +100,35 @@
             </div>
           </div>
         </div>
+        {# Slide 2 #}
         <div class="splide__slide">
           <div class="w-full h-screen bg-green flex items-center">
             <div class="container mx-auto flex justify-start lg:justify-center items-center">
               <div class="grid grid-cols-1 grid-rows-1 items-center">
                 <p class="text-5xl sm:text-7xl lg:text-13xl ml-32 lg:ml-72 mb-0 font-arsilon text-white col-start-1 col-end-1 row-start-1 row-end-1">Almendras</p>
                 <img class="w-56 lg:w-auto col-start-1 col-end-1 row-start-1 row-end-1" src="{{ site.theme.link }}/static/img/almond_perspective.webp" />
+              </div>
+            </div>
+          </div>
+        </div>
+        {# Slide 3 #}
+        <div class="splide__slide">
+          <div class="w-full h-screen bg-green flex items-center">
+            <div class="container mx-auto flex justify-start lg:justify-center items-center">
+              <div class="grid grid-cols-1 grid-rows-1 items-center">
+                <p class="text-5xl sm:text-7xl lg:text-13xl ml-32 lg:ml-72 mb-0 font-arsilon text-white col-start-1 col-end-1 row-start-1 row-end-1">Nueces</p>
+                <img class="w-56 lg:w-auto col-start-1 col-end-1 row-start-1 row-end-1" src="{{ site.theme.link }}/static/img/nueces-perspectiva.webp" />
+              </div>
+            </div>
+          </div>
+        </div>
+        {# Slide 4 #}
+        <div class="splide__slide">
+          <div class="w-full h-screen bg-green flex items-center">
+            <div class="container mx-auto flex justify-start lg:justify-center items-center">
+              <div class="grid grid-cols-1 grid-rows-1 items-center">
+                <p class="text-5xl sm:text-7xl lg:text-13xl ml-32 lg:ml-72 mb-0 font-arsilon text-white col-start-1 col-end-1 row-start-1 row-end-1">Pecanas</p>
+                <img class="w-56 lg:w-auto col-start-1 col-end-1 row-start-1 row-end-1" src="{{ site.theme.link }}/static/img/pecanas-perspectiva.webp" />
               </div>
             </div>
           </div>
@@ -155,7 +179,8 @@
       <div class="w-full p-4 flex justify-center items-center">
         <div class="w-full">
           <h4 class="text-black text-4xl font-bold text-center">¿Tienes dudas?</h4>
-          <form action="">
+          <form action="{{ form_action }}" method="POST">
+            <input type="hidden" name="action" value="contact_form">
             <div class="my-4">
               <input class="w-full rounded-md focus:ring-blue" type="text" name="name" placeholder="¿Cual es tu nombre?">
             </div>

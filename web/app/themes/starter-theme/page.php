@@ -25,4 +25,5 @@ $context = Timber::context();
 
 $timber_post     = new Timber\Post();
 $context['post'] = $timber_post;
+$context['form_action'] = esc_url( admin_url('admin-post.php') );
 Timber::render( array( 'page-' . $timber_post->post_name . '.twig', 'page.twig' ), $context );
