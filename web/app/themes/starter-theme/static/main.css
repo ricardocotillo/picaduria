@@ -1222,6 +1222,16 @@ select {
   background-color: rgba(101, 253, 48, var(--tw-bg-opacity));
 }
 
+.bg-blue {
+  --tw-bg-opacity: 1;
+  background-color: rgba(38, 218, 253, var(--tw-bg-opacity));
+}
+
+.bg-yellow {
+  --tw-bg-opacity: 1;
+  background-color: rgba(252, 193, 45, var(--tw-bg-opacity));
+}
+
 .bg-150\% {
   background-size: 130%;
 }
