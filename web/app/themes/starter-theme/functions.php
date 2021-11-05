@@ -17,11 +17,7 @@
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
-$composer_autoload = __DIR__ . '/vendor/autoload.php';
-if ( file_exists( $composer_autoload ) ) {
-	require_once $composer_autoload;
-	$timber = new Timber\Timber();
-}
+$timber = new Timber\Timber();
 
 function timber_set_product( $post ) {
     global $product;
