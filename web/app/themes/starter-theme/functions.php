@@ -14,6 +14,7 @@
  * plug-in, you can safely delete this block.
  */
 
+use Carbon_Fields\Carbon_Fields;
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
@@ -118,7 +119,7 @@ class StarterSite extends Timber\Site {
 	}
 
 	public function crb_load() {
-		\Carbon_Fields\Carbon_Fields::boot();
+		Carbon_Fields::boot();
 	}
 
 	public function crb_attach_theme_options() {
