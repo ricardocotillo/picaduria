@@ -128,10 +128,13 @@ class StarterSite extends Site {
 	public function crb_attach_theme_options() {
 		Container::make( 'theme_options', 'rc-social-links', __( 'Social Links' ) )
 			->add_fields( array(
-				Field::make( 'text', 'crb_facebook_link', __( 'Facebook Link' ) )->set_default_value( '#' ),
-				Field::make( 'text', 'crb_instagram_link', __( 'Instagram Link' ) )->set_default_value( '#' ),
-				Field::make( 'text', 'crb_whatsapp_link', __( 'Whatsapp Link' ) )->set_default_value( '#' ),
+				Field::make( 'text', 'crb_facebook_link', _( 'Facebook Link' ) )->set_default_value( '#' ),
+				Field::make( 'text', 'crb_instagram_link', _( 'Instagram Link' ) )->set_default_value( '#' ),
+				Field::make( 'text', 'crb_whatsapp_link', _( 'Whatsapp Link' ) )->set_default_value( '#' ),
 			) );
+			// ->add_fields( array(
+			// 	Field::make( 'complex', 'rc_slider', __('Slider') )->add_fields( 'slider', array( Field::make( 'text', 'title', __('Title') ), Field::make( 'image', 'image', __('Image') ) ) )
+			// ) );
 	}
 
 	/** This is where you add some context
