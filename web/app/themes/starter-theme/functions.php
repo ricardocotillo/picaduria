@@ -14,11 +14,14 @@
  * plug-in, you can safely delete this block.
  */
 
+use Timber\Timber;
+use Timber\Site;
+use Timber\Menu;
 use Carbon_Fields\Carbon_Fields;
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
-$timber = new Timber\Timber();
+$timber = new Timber();
 
 function timber_set_product( $post ) {
     global $product;
@@ -66,7 +69,7 @@ Timber::$autoescape = false;
  * We're going to configure our theme inside of a subclass of Timber\Site
  * You can move this to its own file and include here via php's include("MySite.php")
  */
-class StarterSite extends Timber\Site {
+class StarterSite extends Site {
 	/** Add timber support. */
 	public function __construct() {
 		add_action( 'after_setup_theme', array($this, 'crb_load') );
@@ -137,8 +140,8 @@ class StarterSite extends Timber\Site {
 	 */
 	public function add_to_context( $context ) {
 		$context['is_front_page'] = is_front_page();
-		$context['menu']  = new Timber\Menu( 'header-menu' );
-		$context['footer_menu']  = new Timber\Menu( 'footer-menu' );
+		$context['menu']  = new Menu( 'header-menu' );
+		$context['footer_menu']  = new Menu( 'footer-menu' );
 		$context['facebook'] = carbon_get_theme_option( 'crb_facebook_link' );
 		$context['instagram'] = carbon_get_theme_option( 'crb_instagram_link' );
 		$context['whatsapp'] = carbon_get_theme_option( 'crb_whatsapp_link' );
