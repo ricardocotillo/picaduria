@@ -83,7 +83,8 @@ class StarterSite extends Site {
 		add_action( 'wp_enqueue_scripts', array( $this, 'add_scripts' ) );
 		add_filter( 'woocommerce_enqueue_styles', '__return_false' );
 		add_filter( 'script_loader_tag', array($this, 'defer_parsing_of_js') );
-		add_action( 'carbon_fields_register_fields', array($this, 'crb_attach_theme_options') );
+		add_action( 'carbon_fields_register_fields', array($this, 'rc_create_fields') );
+		add_filter( 'admin_init', array( $this, 'rc_disable_editor' ) );
 
 		parent::__construct();
 	}
@@ -98,6 +99,22 @@ class StarterSite extends Site {
 	// Disable gutembreg
 	public function disable_gutenberg_editor() {
 		return false;
+	}
+
+	public function rc_disable_editor() {
+		if (isset($_GET['post'])) {
+			$post_ID = $_GET['post'];
+		} else if (isset($_POST['post_ID'])) {
+			$post_ID = $_POST['post_ID'];
+		}
+
+		if (!isset($post_ID) || empty($post_ID)) {
+			return;
+		}
+		
+		if ($post_ID == 18) {
+			remove_post_type_support('page', 'editor');
+		}
 	}
 
 	public function add_scripts() {
@@ -125,7 +142,7 @@ class StarterSite extends Site {
 		Carbon_Fields::boot();
 	}
 
-	public function crb_attach_theme_options() {
+	public function rc_create_fields() {
 		Container::make( 'theme_options', 'rc-social-links', __( 'Social Links' ) )
 			->add_fields( array(
 				Field::make( 'text', 'crb_facebook_link', _( 'Facebook Link' ) )->set_default_value( '#' ),
