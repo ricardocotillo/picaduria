@@ -132,9 +132,19 @@ class StarterSite extends Site {
 				Field::make( 'text', 'crb_instagram_link', _( 'Instagram Link' ) )->set_default_value( '#' ),
 				Field::make( 'text', 'crb_whatsapp_link', _( 'Whatsapp Link' ) )->set_default_value( '#' ),
 			) );
-			// ->add_fields( array(
-			// 	Field::make( 'complex', 'rc_slider', __('Slider') )->add_fields( 'slider', array( Field::make( 'text', 'title', __('Title') ), Field::make( 'image', 'image', __('Image') ) ) )
-			// ) );
+
+		Container::make( 'post_meta', 'Page Blocks' )
+		->where( 'post_type', '=', 'page' )
+		->where( 'post_id', '=', 18 )
+		->add_fields( array(
+			Field::make( 'complex', 'rc_slider', __( 'Slider' ) )
+				->add_fields( 'slider', array( 
+					Field::make( 'text', 'title', __( 'Title' ) ),
+					Field::make( 'image', 'image', __( 'Image' ) )->set_value_type( 'url' ),
+					Field::make( 'color', 'color', __( 'Color' ) )->set_palette( array( 'rgb(252, 23, 133)', 'rgb(101, 253, 48)', 'rgb(38, 218, 253)', 'rgb(252, 193, 45)' ) ),
+				) 
+			),
+		) );
 	}
 
 	/** This is where you add some context

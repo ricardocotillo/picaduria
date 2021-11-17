@@ -26,4 +26,5 @@ $context = Timber::context();
 $timber_post     = new Timber\Post();
 $context['post'] = $timber_post;
 $context['form_action'] = esc_url( admin_url('admin-post.php') );
+$context['slider'] = carbon_get_post_meta( get_the_ID(), 'rc_slider' );
 Timber::render( array( 'page-' . $timber_post->post_name . '.twig', 'page.twig' ), $context );
