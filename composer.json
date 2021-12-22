@@ -40,7 +40,7 @@
     "roots/wordpress": "5.8.2",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
-    "wpackagist-plugin/woocommerce": "^5.7",
+    "wpackagist-plugin/woocommerce": "^6.0",
     "mnsami/composer-custom-directory-installer": "^2.0",
     "wpackagist-plugin/post-smtp": "^2.0",
     "timber/timber": "^1.19",
